@@ -1,5 +1,8 @@
 package com.example.upgradProject.upgradProject.model;
 
+import org.hibernate.annotations.OnDelete;
+import org.hibernate.annotations.OnDeleteAction;
+
 import javax.persistence.*;
 import java.sql.Timestamp;
 
@@ -16,6 +19,18 @@ public class Question {
     private String content;
     private Timestamp date;
     private Long user_id;
+
+
+   /*@ManyToOne
+    @JoinColumn(name = "user_id",nullable = false)
+    @OnDelete(action = OnDeleteAction.CASCADE)
+    private Answer answer;
+
+    @ManyToOne
+    @JoinColumn(name = "question_id",nullable = false)
+    @OnDelete(action = OnDeleteAction.CASCADE)
+    private Answer questions;*/
+
 
     public Long getId() {
         return id;

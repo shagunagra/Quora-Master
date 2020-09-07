@@ -2,6 +2,9 @@ package com.example.upgradProject.upgradProject.model;
 
 
 
+import org.hibernate.annotations.OnDelete;
+import org.hibernate.annotations.OnDeleteAction;
+
 import javax.persistence.*;
 
 @Entity
@@ -25,6 +28,28 @@ public class User {
     private String dob;
     private String role;
     private String contactnumber;
+
+
+    /*@ManyToOne
+    @JoinColumn(name = "user_id", nullable = false)
+    @OnDelete(action = OnDeleteAction.CASCADE)
+    private Question question;
+
+    @ManyToOne
+    @JoinColumn(name = "user_id", nullable = false)
+    @OnDelete(action = OnDeleteAction.CASCADE)
+    private User_auth user_auth;
+
+    @ManyToOne
+    @JoinColumn(name = "user_id",nullable = false)
+    @OnDelete(action = OnDeleteAction.CASCADE)
+    private Answer answer;
+
+    @ManyToOne
+    @JoinColumn(name = "question_id",nullable = false)
+    @OnDelete(action = OnDeleteAction.CASCADE)
+    private Answer questions;*/
+
 
     public Long getId() {
         return id;
