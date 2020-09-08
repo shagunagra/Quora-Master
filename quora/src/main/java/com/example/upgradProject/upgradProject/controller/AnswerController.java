@@ -23,34 +23,34 @@ public class AnswerController {
         this.answerRepository=answerRepository;
     }
 
-    @GetMapping("/answer")
+    @GetMapping("/answer/all")
     Collection<Answer> answer(){
         return answerRepository.findAll();
     }
 
-    @GetMapping("/answer/{id}")
-    ResponseEntity<?> getanswer(@PathVariable Long id){
-        Optional<Answer> answer = answerRepository.findById(id);
+    @GetMapping("answer/all/{question_id}")
+    ResponseEntity<?> getanswer(@PathVariable Long question_id){
+        Optional<Answer> answer = answerRepository.findById(question_id);
         return answer.map(response -> ResponseEntity.ok().body(response))
                 .orElse(new ResponseEntity<>(HttpStatus.NOT_FOUND));
     }
 
-    @PostMapping("/answer")
+    @PostMapping("/question/{question_id}/answer/create")
     ResponseEntity<Answer> createanswer(@Valid @RequestBody Answer answer) throws URISyntaxException {
         Answer result= answerRepository.save(answer);
         return ResponseEntity.created(new URI("/api/answer" + result.getUuid())).body(result);
     }
 
-    @PutMapping("/answer/{id}")
+    @PutMapping("/answer/edit/{answer_id}")
     ResponseEntity<Answer> updateanswer(@Valid @RequestBody Answer answer){
         Answer result= answerRepository.save(answer);
         return ResponseEntity.ok().body(result);
     }
 
 
-    @DeleteMapping("/answer/{id}")
-    ResponseEntity<?> deleteanswer(@PathVariable Long id){
-        answerRepository.deleteById(id);
+    @DeleteMapping("/answer/delete/{answer_id}")
+    ResponseEntity<?> deleteanswer(@PathVariable Long answer_id){
+        answerRepository.deleteById(answer_id);
         return ResponseEntity.ok().build();
     }
 
