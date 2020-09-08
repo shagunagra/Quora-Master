@@ -3,6 +3,10 @@ package com.example.upgradProject.upgradProject.model;
 import javax.persistence.*;
 import java.sql.Timestamp;
 
+
+/*This is user_auth table.*/
+
+
 @Entity
 @Table(name = "user_auth")
 public class User_auth {

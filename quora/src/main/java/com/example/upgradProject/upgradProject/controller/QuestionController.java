@@ -13,6 +13,10 @@ import java.net.URISyntaxException;
 import java.util.Collection;
 import java.util.Optional;
 
+
+/*This controller is for getting the question and its details.*/
+
+
 @RestController
 @RequestMapping("/api")
 public class QuestionController {

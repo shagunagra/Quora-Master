@@ -14,6 +14,10 @@ import java.net.URISyntaxException;
 import java.util.Collection;
 import java.util.Optional;
 
+
+/*This controller is for user signin and signup.*/
+
+
 @RestController
 @RequestMapping("/api")
 public class UserController {

@@ -8,8 +8,11 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.Collection;
 import java.util.Optional;
+
+
+/*This controller is for getting the user profile.*/
+
 
 @RestController
 @RequestMapping("/api")

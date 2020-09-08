@@ -6,6 +6,10 @@ import org.hibernate.annotations.OnDeleteAction;
 import javax.persistence.*;
 import java.sql.Timestamp;
 
+
+/*This is question table.*/
+
+
 @Entity
 @Table(name="question")
 public class Question {

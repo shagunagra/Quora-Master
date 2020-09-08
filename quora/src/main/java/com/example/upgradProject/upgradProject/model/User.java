@@ -5,6 +5,10 @@ import org.hibernate.annotations.OnDeleteAction;
 
 import javax.persistence.*;
 
+
+/*This is user table.*/
+
+
 @Entity
 @Table(name="users")
 public class User {

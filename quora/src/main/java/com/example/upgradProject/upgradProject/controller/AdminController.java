@@ -9,6 +9,10 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+
+/*This controller part is for deleting the user by its user_id.*/
+
+
 @RestController
 @RequestMapping("/api")
 public class AdminController {
