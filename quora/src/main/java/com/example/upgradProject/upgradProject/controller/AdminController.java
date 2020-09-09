@@ -24,7 +24,7 @@ public class AdminController {
         this.userRepository=userRepository;
     }
 
-    @DeleteMapping("/admin/user/{userId}")
+    @DeleteMapping("/admin/user/{user_id}")
     ResponseEntity<?> deleteusers(@PathVariable Long user_id){
         userRepository.deleteById(user_id);
         return ResponseEntity.ok().build();
